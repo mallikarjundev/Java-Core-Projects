@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07895b66-e095-4f7a-ab9c-df1c4265e06b" name="Changes" comment="added employee management project&#10;added basic operations">
-      <change afterPath="$PROJECT_DIR$/ATMMachine/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ATMMachine/src/main/java/org/example/ATM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ATMMachine/src/main/java/org/example/ATMOperationImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ATMMachine/src/main/java/org/example/ATMOperationInterface.java" afterDir="false" />
+    <list default="true" id="07895b66-e095-4f7a-ab9c-df1c4265e06b" name="Changes" comment="added ATM project&#10;added basic operations">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagementSystemWithMySQL/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagementSystemWithMySQL/src/main/java/org/example/dao/StudentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagementSystemWithMySQL/src/main/java/org/example/dao/StudentDaoInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagementSystemWithMySQL/src/main/java/org/example/db/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagementSystemWithMySQL/src/main/java/org/example/main/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentManagementSystemWithMySQL/src/main/java/org/example/model/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -36,13 +39,16 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2k27zIaHyXRXQlgte990ooQpJO0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main (1).executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -50,16 +56,19 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="ATMMachine" />
+      <module name="Employee-Management-System" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,10 +78,10 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="Employee-Management-System" />
+      <module name="ATMMachine" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,7 +91,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -127,13 +135,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722602560163</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added ATM project&#10;added basic operations">
+      <option name="closed" value="true" />
+      <created>1722609607452</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722609607452</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added 2 projects" />
     <MESSAGE value="added payroll project" />
     <MESSAGE value="added employee management project&#10;added basic operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="added employee management project&#10;added basic operations" />
+    <MESSAGE value="added ATM project&#10;added basic operations" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ATM project&#10;added basic operations" />
   </component>
 </project>
