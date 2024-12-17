@@ -40,4 +40,30 @@ public class UserServiceTest {
         User user = new User("newUser", null, "newuser@example.com"); // Null password
         assertFalse(userService.registerUser(user), "User registration should fail if password is null");
     }
+
+    @Test
+    public void testUpdateUserDetails() {
+        UserService userService = new UserService();
+        User user = new User("user3", "password3", "user3@example.com");
+        userService.registerUser(user);
+
+        User updatedUser = new User("user3", "newPassword", "newEmail@example.com");
+        boolean result = userService.updateUserDetails(updatedUser);
+
+        assertTrue(result, "User details should be updated.");
+        assertEquals("newPassword", userService.getUserStore().get("user3").getPassword());
+        assertEquals("newEmail@example.com", userService.getUserStore().get("user3").getEmail());
+    }
+
+    @Test
+    public void testDeleteUser() {
+        UserService userService = new UserService();
+        User user = new User("user4", "password4", "user4@example.com");
+        userService.registerUser(user);
+
+        boolean result = userService.deleteUser("user4");
+
+        assertTrue(result, "User should be deleted.");
+        assertNull(userService.getUserStore().get("user4"), "User should not exist in store.");
+    }
 }
