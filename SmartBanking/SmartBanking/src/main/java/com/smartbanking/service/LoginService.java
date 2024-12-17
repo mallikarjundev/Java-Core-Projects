@@ -1,5 +1,7 @@
 package com.smartbanking.service;
 
+import com.smartbanking.model.User;
+import com.smartbanking.repository.UserRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -8,15 +10,9 @@ import java.util.Map;
 
 public class LoginService {
     private static final Logger logger = LogManager.getLogger(LoginService.class);
-    private final Map<String, String > userDatabase = new HashMap<>();
-    private String loggedInUser = null;
+    private final Map<String, User > userDatabase = UserRepository.getInstance().getUserStore();
 
-    public LoginService(){
-        //preload some dummy users
-        logger.debug("Initializing loginservice with predefined users.");
-        userDatabase.put("user1","password1");
-        userDatabase.put("user2","password2");
-    }
+    private String loggedInUser = null;
 
     public boolean login(String username, String password){
         logger.info("Attempting to log in user: {}", username);
@@ -25,8 +21,8 @@ public class LoginService {
                 logger.warn("Login failed: username or password is null.");
                 return false;
             }
-            if (userDatabase.containsKey(username)){
-                if (userDatabase.get(username).equals(password)){
+            User user = userDatabase.get(username);
+                if (user!=null && user.getPassword().equals(password)){
                     loggedInUser= username;
                     logger.info("Login successful for user: {}", username);
                     return true;
@@ -35,10 +31,6 @@ public class LoginService {
                     logger.warn("Login failed for user: {} due to incorrect password", username);
                     return false;
                 }
-            }else {
-                logger.warn("User not found: {}", username);
-            }
-            return false;
         }catch (Exception e){
             logger.error("An unexpected error occurred during login for user: {}", username, e);
             return false;
@@ -53,7 +45,7 @@ public class LoginService {
             logger.info("Logout successful.");
         }
         else {
-            System.out.println("No user is logged in.");
+            logger.warn("No user is logged in.");
         }
     }
 
