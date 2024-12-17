@@ -6,13 +6,21 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class UserService {
     private static final Logger logger = LogManager.getLogger(UserService.class);
 
     private Map<String, User> userStore = UserRepository.getInstance().getUserStore();
 
+    public void getUsersList(){
+        Set<String> list = userStore.keySet();
+        for (String user : list){
+            System.out.println(user);
+        }
+    }
     public boolean registerUser(User user) {
         logger.info("Attempting to register user: {}", user.getUsername());
 
@@ -57,5 +65,6 @@ public class UserService {
         logger.info("User {} deleted successfully.",username);
         return true;
     }
+
 
 }

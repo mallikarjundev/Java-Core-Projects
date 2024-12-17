@@ -17,9 +17,11 @@ public class SmartBankingApp {
             System.out.print("Welcome to Smart Banking system \n");
             System.out.println("1. Register");
             System.out.println("2. Login");
-            System.out.println("3. Update User");
-            System.out.println("4. Delete User");
-            System.out.println("5. Exit");
+            System.out.println("3. View Users list");
+            System.out.println("4. Update User");
+            System.out.println("5. Delete User");
+            System.out.println("6. Logout");
+            System.out.println("7. Exit");
 
             //Read user choice
             System.out.println("Enter an option:");
@@ -29,11 +31,15 @@ public class SmartBankingApp {
                     break;
                 case 2: userInputHandler.loginUser();
                     break;
-                case 3: userInputHandler.updateUser();
+                case 3: userInputHandler.viewUsers();
                     break;
-                case 4: userInputHandler.deleteUser();
+                case 4: userInputHandler.updateUser();
                     break;
-                case 5: exit=true;
+                case 5: userInputHandler.deleteUser();
+                    break;
+                case 6: userInputHandler.logout();
+                    break;
+                case 7: exit=true;
                     System.out.println("Exiting the Smart Banking System.");
                     break;
                 default:
