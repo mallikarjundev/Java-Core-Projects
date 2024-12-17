@@ -29,6 +29,9 @@ public class UserInputHandler {
         }
     }
 
+    public void viewUsers(){
+        userService.getUsersList();
+    }
     public void updateUser(){
         System.out.println("Enter new username:");
         String username = sc.nextLine();
@@ -69,5 +72,9 @@ public class UserInputHandler {
         }else {
             System.out.println("Login failed.");
         }
+    }
+
+    public void logout(){
+        loginService.logout();
     }
 }
