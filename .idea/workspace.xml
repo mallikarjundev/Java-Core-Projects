@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="07895b66-e095-4f7a-ab9c-df1c4265e06b" name="Changes" comment="added ATM project&#10;added basic operations">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+=======
     <list default="true" id="07895b66-e095-4f7a-ab9c-df1c4265e06b" name="Changes" comment="added StudentManagement with MYSQL DB">
+>>>>>>> 386d46fd38c7157f081a5f701e63551e936584f4
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +50,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+<<<<<<< HEAD
+    "git-widget-placeholder": "feature/lmsv1",
+=======
     "git-widget-placeholder": "SmartBanking-dev",
+>>>>>>> 386d46fd38c7157f081a5f701e63551e936584f4
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
@@ -85,13 +94,6 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
