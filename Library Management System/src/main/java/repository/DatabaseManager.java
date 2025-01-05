@@ -26,14 +26,22 @@ public class DatabaseManager {
         userStore.put(addUser.getName(), addUser);
     }
 
-    public boolean fetch(String name, String password){
+    public boolean fetch(String name){
         User user = userStore.get(name);
-        if(user!= null && user.getPassword().equals(password)){
-            System.out.println("Login Successful!");
+        if(user!= null){
             return true;
         }
         else {
-            System.out.println("Invalid password.");
+            return false;
+        }
+    }
+
+    public boolean fetch(String name, String password){
+        User user = userStore.get(name);
+        if(user!= null && user.getPassword().equals(password)){
+            return true;
+        }
+        else {
             return false;
         }
     }
