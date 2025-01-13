@@ -29,7 +29,7 @@ public class RegisterUser {
 
                 System.out.println("Enter your username:");
                 String username = sc.nextLine();
-                if (!DatabaseManager.getInstance().fetch(username)){
+                if (!databaseManager.fetch(username)){
                     System.out.println("Enter new password:");
                     password = sc.nextLine();
 
