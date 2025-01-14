@@ -24,4 +24,12 @@ public class DataItem {
     public void setProcessed(boolean processed) {
         this.processed = processed;
     }
+
+    @Override
+    public String toString() {
+        return "DataItem{" +
+                "data='" + data + '\'' +
+                ", processed=" + processed +
+                '}';
+    }
 }
