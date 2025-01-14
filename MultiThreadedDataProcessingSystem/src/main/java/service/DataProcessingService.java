@@ -16,13 +16,13 @@ public class DataProcessingService {
         this.executorService = Executors.newFixedThreadPool(4);
     }
 
-    public void processData(List<DataItem> dataItems){
-        for (DataItem item: dataItems){
+    public void processData(List<DataItem> dataItems) {
+        for (DataItem item : dataItems) {
             // Submit each item to be processed by a separate thread
-            executorService.submit(()-> {
+            executorService.submit(() -> {
                 try {
                     processItem(item);
-                }catch (Exception e){
+                } catch (Exception e) {
                     logger.severe("Error processing data item: " + item.getData() + " - " + e.getMessage());
                 }
             });
@@ -32,9 +32,9 @@ public class DataProcessingService {
         executorService.shutdown();
     }
 
-    private void processItem(DataItem item){
+    private void processItem(DataItem item) {
         // Simulate data processing (could be enhanced with real processing logic)
         item.setProcessed(true);
-        logger.info("Processing data: "+item.getData() + " by thread: " + Thread.currentThread().getName());
+        logger.info("Processing data: " + item.getData() + " by thread: " + Thread.currentThread().getName());
     }
 }

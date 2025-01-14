@@ -13,7 +13,7 @@ public class DataController {
         this.dataProcessingService = new DataProcessingService();
     }
 
-    public void processData(){
+    public void processData() {
         // Sample data to process
         List<DataItem> dataItems = new ArrayList<>();
         dataItems.add(new DataItem("Data 1"));
