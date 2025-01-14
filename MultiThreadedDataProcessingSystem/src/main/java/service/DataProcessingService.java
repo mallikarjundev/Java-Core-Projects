@@ -5,9 +5,11 @@ import model.DataItem;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.logging.Logger;
 
 public class DataProcessingService {
     private final ExecutorService executorService;
+    private static final Logger logger = Logger.getLogger(DataProcessingService.class.getName());
 
     public DataProcessingService() {
         // Create a thread pool with 4 threads
@@ -18,7 +20,11 @@ public class DataProcessingService {
         for (DataItem item: dataItems){
             // Submit each item to be processed by a separate thread
             executorService.submit(()-> {
-                processItem(item);
+                try {
+                    processItem(item);
+                }catch (Exception e){
+                    logger.severe("Error processing data item: " + item.getData() + " - " + e.getMessage());
+                }
             });
         }
 
@@ -29,6 +35,6 @@ public class DataProcessingService {
     private void processItem(DataItem item){
         // Simulate data processing (could be enhanced with real processing logic)
         item.setProcessed(true);
-        System.out.println("Processing data: "+item.getData() + " by thread: " + Thread.currentThread().getName());
+        logger.info("Processing data: "+item.getData() + " by thread: " + Thread.currentThread().getName());
     }
 }
